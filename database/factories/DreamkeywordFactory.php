@@ -5,6 +5,7 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Dream;
 use App\Models\Keyword;
+use App\Models\User;
 
 class DreamkeywordFactory extends Factory
 {
@@ -17,7 +18,8 @@ class DreamkeywordFactory extends Factory
     {
         return [
             "dream_id" => Dream::factory(),
-            "keyword_id" => Keyword::factory()
+            "keyword_id" => Keyword::factory(),
+            "user_id" => User::factory()
         ];
     }
 }

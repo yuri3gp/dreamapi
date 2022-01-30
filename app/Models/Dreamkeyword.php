@@ -17,4 +17,8 @@ class Dreamkeyword extends Model
     {
         return $this->belongsTo(Keyword::class);
     }
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

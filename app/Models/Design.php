@@ -12,7 +12,10 @@ class Design extends Model
     protected $table = 'design';
 
     protected $fillable = [
-        "desing"
+        "desing",
+        "dream_id",
+        "created_at",
+        "updated_at"
     ];
 
     public function dream()

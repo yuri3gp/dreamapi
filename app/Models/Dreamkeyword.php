@@ -9,6 +9,11 @@ class Dreamkeyword extends Model
 {
     protected $table = 'dreamkeyword';
     use HasFactory;
+
+    protected $fillable = [
+        "dream_id",
+        "keyword_id",
+    ];
     public function dream()
     {
         return $this->belongsTo(Dream::class);
@@ -16,9 +21,5 @@ class Dreamkeyword extends Model
     public function keyword()
     {
         return $this->belongsTo(Keyword::class);
-    }
-    public function user()
-    {
-        return $this->belongsTo(User::class);
     }
 }

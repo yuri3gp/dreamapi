@@ -17,10 +17,8 @@ class Dreamkeyword extends Migration
             $table->increments('id');
             $table->integer("dream_id")->unsigned();
             $table->integer("keyword_id")->unsigned();
-            $table->unsignedBigInteger('user_id');
             $table->foreign("dream_id")->references("id")->on("dream")->onDelete('cascade');
             $table->foreign("keyword_id")->references("id")->on("keyword")->onDelete('cascade');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('restrict');
             $table->timestamps();
         });
     }
